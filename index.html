@@ -4,14 +4,96 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SPECTRA - Audio Waveform Visualizer</title>
+  <title>SPECTRA - '90s Audio Player</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="assets/SPECTRA FAVICON.svg" type="image/x-icon">
 </head>
 
 <body>
-  <main>
+  <main class="spectra">
+
+    <section class="player">
+      <header class="player-header">
+        <span>SPECTRA</span>
+
+        <div class="window-controls">
+          <button>_</button>
+          <button>□</button>
+          <button>×</button>
+        </div>
+      </header>
+
+      <div id="youtube-player"></div>
+
+      <div class="display">
+
+        <div class="track-info">
+          <span class="track-title">NO TRACK PLAYING</span>
+          <span class="track-artist">ARTIST</span>
+        </div>
+
+        <div class="visualizer">
+          <canvas id="visualizer"></canvas>
+        </div>
+
+        <div class="time">
+          <span>00:00</span>
+          <span>00:00</span>
+        </div>
+
+      </div>
+
+      <div class="controls">
+
+        <button class="control-btn" aria-label="Anterior">
+          <img src="icons/previous.png" alt="">
+        </button>
+
+        <button class="control-btn" aria-label="Reproduzir">
+          <img src="icons/play.png" alt="">
+        </button>
+
+        <button class="control-btn" aria-label="Pausar">
+          <img src="icons/pause.png" alt="">
+        </button>
+
+        <button class="control-btn" aria-label="Parar">
+          <img src="icons/stop.png" alt="">
+        </button>
+
+        <button class="control-btn" aria-label="Próxima">
+          <img src="icons/next.png" alt="">
+        </button>
+
+      </div>
+
+      <div class="volume">
+        <span>VOL</span>
+        <input type="range" min="0" max="100" value="80">
+      </div>
+
+    </section>
+
+    <section class="playlist">
+
+      <header class="playlist-header">
+        <span>SPECTRA PLAYLIST</span>
+      </header>
+
+      <div class="playlist-content">
+        <ol id="playlist"></ol>
+      </div>
+
+      <form class="add-track">
+        <input type="url" id="youtube-url" placeholder="YouTube URL">
+
+        <button type="submit" aria-label="Adicionar"><img src="icons/add.png" alt=""></button>
+      </form>
+
+    </section>
 
   </main>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
