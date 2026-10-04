@@ -1,4 +1,4 @@
-# [SPECTRA](https://matheuscoletti08.github.io/SPECTRA/)\*\*
+# [SPECTRA](https://matheuscoletti08.github.io/SPECTRA)
 
 > **Um reprodutor de áudio com inspiração na estética dos anos 90.**
 
